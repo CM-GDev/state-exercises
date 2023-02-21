@@ -26,7 +26,7 @@ const styles = {
         marginBottom: '0px',
     },
     logo:{
-        height: '150%'
+        height: '140%'
     }
 }
 
@@ -49,19 +49,11 @@ function Navigation({ currentPage, handlePageChange }) {
                 <a href='#!' data-target="side-out" className='sidenav-trigger'><i className='material-icons'>menu</i></a>
                 <ul className="right hide-on-med-and-down">
                     <li className={currentPage === 'Page1' ? 'active' : ''}>
-                        <a href="#AboutMe" onClick={() => handlePageChange('Page1')}>Page 1
+                        <a href="#Page1" onClick={() => handlePageChange('Page1')}>Page 1
                         </a>
                     </li>
-                    <li className={currentPage === 'Portfolio' ? 'active' : ''}>
-                        <a href="#Portfolio" onClick={() => handlePageChange('Portfolio')}>Portfolio<i className='material-icons right'>work</i>
-                        </a>
-                    </li>
-                    <li className={currentPage === 'Contact' ? 'active' : ''}>
-                        <a href="#Contact" onClick={() => handlePageChange('Contact')}>Contact<i className='material-icons right'>contact_mail</i>
-                        </a>
-                    </li>
-                    <li className={currentPage === 'Resume' ? 'active' : ''}>
-                        <a href="#Resume" onClick={() => handlePageChange('Resume')}>Resume<i className='material-icons right'>description</i>
+                    <li className={currentPage === 'Page2' ? 'active' : ''}>
+                        <a href="#Page2" onClick={() => handlePageChange('Page2')}>Page2
                         </a>
                     </li>
                 </ul>
@@ -70,30 +62,20 @@ function Navigation({ currentPage, handlePageChange }) {
         {/* Code for side nav when screen is small */}
         <ul className="sidenav" id="side-out">
             <li>
-                <a href="#AboutMe" onClick={() => handlePageChange('AboutMe')}
-                className={`sidenav-close ${currentPage === 'AboutMe' ? 'active' : ''}`}>About Me<i className="material-icons right">person</i>
+                <a href="#Page1" onClick={() => handlePageChange('Page1')}
+                className={`sidenav-close ${currentPage === 'Page1' ? 'active' : ''}`}>Page1
                 </a>
             </li>
             <li>
-                <a href="#Portfolio" onClick={() => handlePageChange('Portfolio')}
-                className={`sidenav-close ${currentPage === 'Portfolio' ? 'active' : ''}`}>Portfolio<i className="material-icons right">work</i>
-                </a>
-            </li>
-            <li>
-                <a href="#Contact" onClick={() => handlePageChange('Contact')}
-                className={`sidenav-close ${currentPage === 'Contact' ? 'active' : ''}`}>Contact<i className="material-icons right">contact_mail</i>
-                </a>
-            </li>
-            <li>
-                <a href="#Resume" onClick={() => handlePageChange('Resume')}
-                className={`sidenav-close ${currentPage === 'Resume' ? 'active' : ''}`}>Resume<i className='material-icons right'>description</i>
+                <a href="#Page2" onClick={() => handlePageChange('Page2')}
+                className={`sidenav-close ${currentPage === 'Page2' ? 'active' : ''}`}>Page2
                 </a>
             </li>
         </ul>
         {/* Header info */}
         <header className="card-panel" style={styles.header}>
             <div className="row valign-wrapper" style={styles.headerDiv} >
-                <img src={Silac} alt="Logo" className="circle responsive-img" style={styles.logo}/>
+                <img src={Silac} alt="Logo" className="responsive-img" style={styles.logo}/>
             </div>
         </header>
     </div>

@@ -1,8 +1,10 @@
+import React from "react";
 
-const Page1 = ()=>{
-    <div className="container">
-        Hello
-    </div>
+export default function Page1() {
+    return(
+        <main className="container">
+            <h3>Hello. Where is the info?</h3>
+        </main>
+    )
 }
 
-export default Page1;

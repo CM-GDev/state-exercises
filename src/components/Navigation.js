@@ -1,7 +1,7 @@
 // importing react, react components and materialize css variable
 import React, {useEffect} from 'react';
 // import Background from '../img/beach.jpg';
-import Silac from './img/SILAC.png';
+import Silac from './img/logo1.png';
 import M from "materialize-css";
 
 // establishing some style variables
@@ -26,7 +26,7 @@ const styles = {
         marginBottom: '0px',
     },
     logo:{
-        height: '140%'
+        height: '150%'
     }
 }
 
@@ -74,7 +74,7 @@ function Navigation({ currentPage, handlePageChange }) {
         </ul>
         {/* Header info */}
         <header className="card-panel" style={styles.header}>
-            <div className="row valign-wrapper" style={styles.headerDiv} >
+            <div className="row valign-wrapper" style={styles.headerDiv}>
                 <img src={Silac} alt="Logo" className="responsive-img" style={styles.logo}/>
             </div>
         </header>

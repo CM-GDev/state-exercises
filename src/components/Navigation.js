@@ -6,27 +6,8 @@ import M from "materialize-css";
 
 // establishing some style variables
 const styles = {
-    navigation: {
-        paddingBottom: "10px",
-        paddingLeft: '2%'
-    },
-    h3: {
-        marginBottom: '0%',
-    },
-    header: {
-        height: '8rem',
-        //backgroundImage: `url(${Background})`,
-        margin: '0.5%',
-        backgroundPosition: 'right',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-    },
-    headerDiv: {
-        height: '100%',
-        marginBottom: '0px',
-    },
-    logo:{
-        height: '150%'
+    rowNav: {
+        height: "65px"
     }
 }
 
@@ -43,20 +24,24 @@ function Navigation({ currentPage, handlePageChange }) {
   return (
     <div>
         {/* Main Nav */}
-        <nav className='green lighten-1 nav-extended' style={styles.navigation}>
-            <div className='nav-wrapper'>
-                <h3 className='brand-logo flow-text truncate' style={styles.h3}>React.js Sandbox</h3>
+        <nav className='green lighten-1 nav-extended'>
+            <div className='row nav-wrapper' style={styles.rowNav}>
                 <a href='#!' data-target="side-out" className='sidenav-trigger'><i className='material-icons'>menu</i></a>
-                <ul className="right hide-on-med-and-down">
-                    <li className={currentPage === 'Page1' ? 'active' : ''}>
-                        <a href="#Page1" onClick={() => handlePageChange('Page1')}>Page 1
-                        </a>
-                    </li>
-                    <li className={currentPage === 'Page2' ? 'active' : ''}>
-                        <a href="#Page2" onClick={() => handlePageChange('Page2')}>Page2
-                        </a>
-                    </li>
-                </ul>
+                <div className='col m2'>
+                    <img src={Silac} alt="Silcan logo" style={styles.rowNav}></img>
+                </div>
+                <div className='col m10'>
+                    <ul className="right hide-on-med-and-down">
+                        <li className={currentPage === 'Page1' ? 'active' : ''}>
+                            <a href="#Page1" onClick={() => handlePageChange('Page1')}>Page 1
+                            </a>
+                        </li>
+                        <li className={currentPage === 'Page2' ? 'active' : ''}>
+                            <a href="#Page2" onClick={() => handlePageChange('Page2')}>Page2
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         {/* Code for side nav when screen is small */}
@@ -71,13 +56,7 @@ function Navigation({ currentPage, handlePageChange }) {
                 className={`sidenav-close ${currentPage === 'Page2' ? 'active' : ''}`}>Page2
                 </a>
             </li>
-        </ul>
-        {/* Header info */}
-        <header className="card-panel" style={styles.header}>
-            <div className="row valign-wrapper" style={styles.headerDiv}>
-                <img src={Silac} alt="Logo" className="responsive-img" style={styles.logo}/>
-            </div>
-        </header>
+        </ul>        
     </div>
   );
 }

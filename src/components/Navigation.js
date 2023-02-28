@@ -24,7 +24,7 @@ function Navigation({ currentPage, handlePageChange }) {
   return (
     <div>
         {/* Main Nav */}
-        <nav className='green lighten-1 nav-extended'>
+        <nav className='green lighten-2 nav-extended'>
             <div className='row nav-wrapper' style={styles.rowNav}>
                 <a href='#!' data-target="side-out" className='sidenav-trigger'><i className='material-icons'>menu</i></a>
                 <div className='col m2'>

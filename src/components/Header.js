@@ -3,6 +3,7 @@ import Navigation from './Navigation';
 import Page1 from './pages/Page1';
 import Page2 from "./pages/Page2";
 import Page3 from "./pages/Page3";
+import users from "./users";
 
 // Prop variables:
 const icon = "cloud";
@@ -17,7 +18,7 @@ const Header = () => {
             return <Page1 icon={icon} size={size} side={side}/>;
         }
         if (currentPage === 'Page2') {
-            return <Page2 />
+            return <Page2 users={users}/>
         }
         return <Page3 />
     }

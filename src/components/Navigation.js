@@ -1,7 +1,7 @@
 // importing react, react components and materialize css variable
 import React, {useEffect} from 'react';
 // import Background from '../img/beach.jpg';
-import Silac from './img/combined.png';
+import Silac from './img/logo1.png';
 import M from "materialize-css";
 
 // establishing some style variables

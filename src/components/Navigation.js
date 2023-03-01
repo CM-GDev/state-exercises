@@ -49,20 +49,17 @@ function Navigation({ currentPage, handlePageChange }) {
         </nav>
         {/* Code for side nav when screen is small */}
         <ul className="sidenav" id="side-out">
-            <li>
+            <li className={currentPage === 'Page1' ? 'active' : ''}>
                 <a href="#Page1" onClick={() => handlePageChange('Page1')}
-                className={`sidenav-close ${currentPage === 'Page1' ? 'active' : ''}`}>Page1
-                </a>
+                className='sidenav-close'>Page1</a>
             </li>
             <li className={currentPage === 'Page2' ? 'active' : ''}>
                 <a href="#Page2" onClick={() => handlePageChange('Page2')}
-                className='sidenav-close'>Page2
-                </a>
+                className='sidenav-close'>Page2</a>
             </li>
             <li className={currentPage === 'Page3' ? 'active' : ''}>
                 <a href="#Page3" onClick={() => handlePageChange('Page3')}
-                className='sidenav-close'>Page3
-                </a>
+                className='sidenav-close '>Page3</a>
             </li>
         </ul>        
     </div>

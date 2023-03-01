@@ -2,7 +2,7 @@
 const Page3 = ()=>{
     return(
     <div>
-        <h1>Hello. Where is the info? Page3</h1>
+        <h4 className="H4alignment">Hello. Where is the info? Page3</h4>
     </div>
     )
 }

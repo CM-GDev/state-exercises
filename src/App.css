@@ -1,5 +1,7 @@
-.App {
+.H4alignment {
+  float: left;
   text-align: center;
+  width: 100%;
 }
 
 .App-logo {

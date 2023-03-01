@@ -24,7 +24,7 @@ function Navigation({ currentPage, handlePageChange }) {
   return (
     <div>
         {/* Main Nav */}
-        <nav className='green lighten-2 nav-extended'>
+        <nav className='green lighten-1 nav-extended'>
             <div className='row nav-wrapper' style={styles.rowNav}>
                 <a href='#!' data-target="side-out" className='sidenav-trigger'><i className='material-icons'>menu</i></a>
                 <div className='col m2'>
@@ -37,7 +37,10 @@ function Navigation({ currentPage, handlePageChange }) {
                             </a>
                         </li>
                         <li className={currentPage === 'Page2' ? 'active' : ''}>
-                            <a href="#Page2" onClick={() => handlePageChange('Page2')}>Page2
+                            <a href="#Page2" onClick={() => handlePageChange('Page2')}>Page2</a>
+                        </li>
+                        <li className={currentPage === 'Page3' ? 'active' : ''}>
+                            <a href="#Page3" onClick={() => handlePageChange('Page3')}>Page3
                             </a>
                         </li>
                     </ul>
@@ -51,9 +54,14 @@ function Navigation({ currentPage, handlePageChange }) {
                 className={`sidenav-close ${currentPage === 'Page1' ? 'active' : ''}`}>Page1
                 </a>
             </li>
-            <li>
+            <li className={currentPage === 'Page2' ? 'active' : ''}>
                 <a href="#Page2" onClick={() => handlePageChange('Page2')}
-                className={`sidenav-close ${currentPage === 'Page2' ? 'active' : ''}`}>Page2
+                className='sidenav-close'>Page2
+                </a>
+            </li>
+            <li className={currentPage === 'Page3' ? 'active' : ''}>
+                <a href="#Page3" onClick={() => handlePageChange('Page3')}
+                className='sidenav-close'>Page3
                 </a>
             </li>
         </ul>        

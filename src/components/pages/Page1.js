@@ -31,10 +31,10 @@ export default function Page1(props) {
                 <a className={`waves-effect btn-${props.size} red`} href="https://www.google.com" target="blank"><i className={`material-icons ${props.side}`}>{props.icon}</i>Props</a>
             </div>
             <div className="row valign-wrapper" >
-                <div className="col s12 m4">
+                <div className="col s12 m4 card-panel hoverable">
                     <img src={logo} alt="silican logo" className="responsive-img"/>
                 </div>
-                <div className="col s12 m3">
+                <div className="col s12 m3 card-panel hoverable">
                     <img src={icon} alt="silican icon" className="responsive-img"/>
                 </div>
             </div>
